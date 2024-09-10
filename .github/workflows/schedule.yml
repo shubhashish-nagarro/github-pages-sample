@@ -14,5 +14,5 @@ jobs:
 
       - name: Time
         run: |
-          current_datetime = $(date)
+          current_datetime=$(date)
           echo "Current Date & Time: $current_datetime"
