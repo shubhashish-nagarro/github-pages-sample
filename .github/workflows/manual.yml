@@ -23,4 +23,4 @@ jobs:
       - name: Inputs
         run: |
           echo "Deploy Version: ${{ inputs.deploy_version }}"
-          echo "Buid Number: ${{ inputs.build_number }}"
+          echo "Buid Number: ${{ github.event.inputs.build_number }}"
