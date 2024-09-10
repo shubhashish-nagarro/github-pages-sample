@@ -1,7 +1,16 @@
 name: Manual
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      deploy_version:
+        description: 'Set Deploy Version'
+        type: string
+        required: true
+      build_number:
+        description: 'Set build numbers from build boss params'
+        type: string
+        required: true
 
 jobs:
   Manual:
@@ -10,3 +19,8 @@ jobs:
     steps:
       - name: Greetings!!!
         run: echo "Hello World!!!"
+
+      - name: Inputs
+        run: |
+          echo "Deploy Version: ${{ inputs.deploy_version }}"
+          echo "Buid Number: ${{ inputs.build_number }}"
