@@ -1,0 +1,14 @@
+name: Demo
+
+on:
+  push:
+    branches: [ main ]
+
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Greeetings
+        run: echo "Hello Demo Workflow!"
