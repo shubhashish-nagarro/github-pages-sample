@@ -1,0 +1,18 @@
+name: Schedule Workflow Run on Every 10 Min
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  Schedule-Workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting
+        run: echo "Hello, I am cron scheduler"
+
+      - name: Time
+        run: |
+          current_datetime = $(date)
+          echo "Current Date & Time: $current_datetime"
